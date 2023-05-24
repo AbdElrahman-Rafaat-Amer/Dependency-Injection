@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Movies</string>
+    <string name="name">name</string>
+    <string name="movie_image">Movie Image</string>
+    <string name="movie_rate">Rate</string>
+    <string name="year">1999</string>
+    <string name="crew">Crew</string>
+    <string name="id">1</string>
+    <string name="resultType">resultType</string>
+
+    <string name="delete_error_message">Failed to delete this item</string>
+    <string name="delete_success_message">Delete successfully</string>
+    <string name="insert_error_message">Failed to save this item</string>
+    <string name="insert_success_message">Saved successfully</string>
+</resources>
