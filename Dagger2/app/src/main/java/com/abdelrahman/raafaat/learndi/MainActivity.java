@@ -26,7 +26,8 @@ public class MainActivity extends AppCompatActivity {
 //        CoffeeComponent coffeeComponent  = DaggerCoffeeComponent.builder().coffeeTypeModule(new CoffeeTypeModule(18657480)).build();
 
         AppComponent appComponent = ((MainApplication) getApplication()).getAppComponent();
-        CoffeeComponent coffeeComponent  = DaggerCoffeeComponent.builder().setAppCompenent(appComponent).setSugar(7).setMilk(102).buildCoffeeComponent();
+//        CoffeeComponent coffeeComponent  = DaggerCoffeeComponent.builder().setAppCompenent(appComponent).setSugar(7).setMilk(102).buildCoffeeComponent();
+        CoffeeComponent coffeeComponent  = appComponent.getCoffeeComponentBuilder().setSugar(7).setMilk(102).buildCoffeeComponent();
 
         /**
          *This is an example how to provide an object of Coffee class without using Filed injection to Coffee class

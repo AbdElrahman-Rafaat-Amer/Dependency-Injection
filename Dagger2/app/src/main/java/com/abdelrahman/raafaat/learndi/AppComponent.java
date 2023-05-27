@@ -13,8 +13,9 @@ import dagger.Component;
 @Component(modules = {RiverModule.class, FarmModule.class})
 public interface AppComponent {
 
-    River getRiver();
-
-    Farm getFarm();
+    CoffeeComponent.Builder getCoffeeComponentBuilder();
+//    River getRiver();
+//
+//    Farm getFarm();
 
 }
