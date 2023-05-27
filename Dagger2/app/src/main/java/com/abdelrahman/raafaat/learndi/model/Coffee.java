@@ -2,23 +2,24 @@ package com.abdelrahman.raafaat.learndi.model;
 
 import android.util.Log;
 
+import com.abdelrahman.raafaat.learndi.annotations.ActivityScope;
 import com.abdelrahman.raafaat.learndi.annotations.Milk;
 
 import javax.inject.Inject;
 import javax.inject.Named;
 
-
+@ActivityScope
 public class Coffee {
 
     private static final String TAG = "Abdo-----------Coffee";
 
     @Inject
-    Farm farm;
+    public Farm farm;
 
     @Inject
-    River river;
+    public River river;
 
-    private CoffeeType coffeeType;
+    public CoffeeType coffeeType;
     private int sugar;
     private int milk;
 //    @Inject

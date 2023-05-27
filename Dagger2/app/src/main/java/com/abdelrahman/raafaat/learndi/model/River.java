@@ -2,13 +2,12 @@ package com.abdelrahman.raafaat.learndi.model;
 
 import android.util.Log;
 
-import javax.inject.Inject;
 
 public class River {
 
     private static final String TAG = "Abdo-----------River";
 
-    @Inject
+    //Note this class is exapmle for non modified class like Retorfit, ViewModel or any other thirdPartyLibreries
     public River() {
         Log.i(TAG, "River: ");
     }

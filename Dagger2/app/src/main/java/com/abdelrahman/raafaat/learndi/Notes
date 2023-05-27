@@ -35,8 +35,9 @@
 /**
 * If ou have a Class you don not have access to edit it (it is only Viewer like thirdPartyLibraries or ViewModel or Retrofit)
 * and want to Inject and use it, You can use Module to provide a way how to make object of this class
-* See the coffeeType Class, coffeeTypeModule and Coffee Class
-* in this case I considered the coffeeType Class is not my class and cannot edit it
+* See the River Class, RiverModule and Coffee Class
+* See the Farm Class, FarmModule and Coffee Class
+* in this case I considered the River and Farm Class is not my class and cannot edit it
 */
 
 /**
