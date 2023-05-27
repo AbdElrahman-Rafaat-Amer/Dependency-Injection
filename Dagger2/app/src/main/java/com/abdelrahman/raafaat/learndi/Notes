@@ -1,0 +1,58 @@
+
+/**Dagger is shortcut for Dependency Acyclic Graph*/
+
+/**Dagger Annotation:
+* 1- @Inject
+* 2- @Component
+* 3- @Module
+* 4- @Provides
+* 5- @Component.Builder
+* 6- @BindsInstance
+* 7- @Named
+* 8- @Singleton
+*/
+
+/** The First Thing is executed in Dagger is
+*   1- Constructor Injection
+*   2- Filed Injection / Parameter Injection
+*   3- Method Injection
+*/
+
+
+/**
+* Method Injection is executed by the order as the first one in the class id executed then the bone blew it and continue.
+* see the methods on Coffee class (openTheShop - connectElectricity - cleanTheShop)
+* and try to reorder them and sae the output then compare between each order and what happen in each case
+*/
+
+
+/**
+* To use Field Injection you must first inject the class(you want to use filed injection on it) constructor
+* But there is some cases ypu can not inject constructor like Activities or Fragments then you must provide a valid way to inject this class
+* See the method inject that take MainActivity as param in CoffeeComponent Interface to see how i did it
+*/
+
+/**
+* If ou have a Class you don not have access to edit it (it is only Viewer like thirdPartyLibraries or ViewModel or Retrofit)
+* and want to Inject and use it, You can use Module to provide a way how to make object of this class
+* See the coffeeType Class, coffeeTypeModule and Coffee Class
+* in this case I considered the coffeeType Class is not my class and cannot edit it
+*/
+
+/**
+*If using Component and this component uses a module but this module take a value in the constructor so we can not use method
+* create() and instead will use method build() -> then name of the method you will give it the value will used in the constructor -> .builder()
+* See the mainActivity onCreate method comment and code and try to switch between them to understand more.
+*/
+
+
+/**
+*Dagger Scopes
+* 1- General scope ---> Single object used in all the app.
+* 2- Custom Scope  ---> Single object used in custom places(The developer who define this places).
+*/
+
+/**
+*
+*/
+

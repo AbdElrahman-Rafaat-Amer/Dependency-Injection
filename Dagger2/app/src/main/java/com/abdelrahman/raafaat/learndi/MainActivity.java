@@ -6,8 +6,6 @@ import android.os.Bundle;
 import android.util.Log;
 
 import com.abdelrahman.raafaat.learndi.model.Coffee;
-import com.abdelrahman.raafaat.learndi.model.Farm;
-import com.abdelrahman.raafaat.learndi.model.River;
 
 import javax.inject.Inject;
 
@@ -23,18 +21,19 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-//        //Manual injection
-//        Farm farm = new Farm();
-//        River river = new River();
-//        Coffee coffee = new Coffee(farm, river);
+
+//        CoffeeComponent coffeeComponent  = DaggerCoffeeComponent.create();
+//        CoffeeComponent coffeeComponent  = DaggerCoffeeComponent.builder().coffeeTypeModule(new CoffeeTypeModule(18657480)).build();
+        CoffeeComponent coffeeComponent  = DaggerCoffeeComponent.builder().setSugar(7).setMilk(102).buildCoffeeComponent();
+        /**
+        *This is an example how to provide an object of Coffee class without using Filed injection to Coffee class
+         */
+//         coffeeComponent.getCoffee().getCoffeeInfo();
 
 
-        //Automate injection by dagger
-
-        CoffeeComponent coffeeComponent = DaggerCoffeeComponent.create();
+        Log.i(TAG, "onCreate: ==============================================================================================");
         coffeeComponent.inject(this);
-//        String coffeeInfo = coffeeComponent.getCoffee().getCoffeeInfo();
-        String coffeeInfo = coffee.getCoffeeInfo();
-        Log.i(TAG, "onCreate:coffeeInfo " + coffeeInfo);
+        coffee.getCoffeeInfo();
+
     }
 }
